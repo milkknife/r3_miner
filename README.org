@@ -6,14 +6,15 @@
 - the last real commit is from 2018, back when charcoal under the hood was just coal with damage applied, while now it is its own object. therefore the script will crash if it tries to look for an item to refuel with, as well as many other bugs that arise from a four-year difference in the minecraft backend.
 - this project takes an old (but excellent and working) script and applies a bunch of fixes to work with today's minecraft.
 ** environment details
-- minecraft 1.18.2
+- minecraft 1.18.2 (should work fine on 1.19.x)
 - [[https://modrinth.com/modpack/eris/version/0.2.1][eris 0.2.1]]
 - [[https://github.com/cc-tweaked/cc-restitched][cc:restitched 1.100.8]]
 ** quick start
 1. place a mining turtle on the ground. By default it will dig 16m forward, then turn right, while slowly creating a 16x16m hole, down to bedrock.
 2. place a chest to the left of the turtle starting point.
-3. right-click the turtle, add fuel (coal, charcoal, or lignite coal (modern industrialization))
+3. right-click the turtle, add fuel (coal, charcoal, or lignite coal [[https://github.com/AztechMC/Modern-Industrialization][(modern industrialization)]]
 4. install a [[https://github.com/eric-wieser/computercraft-github][github client]]: ~pastebin run p8PJVxC4~
 5. download miner: ~github clone milkknife/r3_miner -b now .~
 6. start miner: ~r3~
 [[https://raw.githubusercontent.com/milkknife/r3_miner/pics/quarry.jpg]]
+pro tip: ~edit inv~ before running ~r3~ to add/remove lines to the drop list. these items won't be collected and stored in the chest.
