@@ -1,3 +1,30 @@
+function dropThrash()
+	-- add/remove items to drop
+	local mc = "minecraft:"
+	local iw = "immersive_weathering:"
+	local thrash = {
+		mc .. "stone",
+		mc .. "cobblestone",
+		mc .. "dirt",
+		mc .. "gravel",
+		mc .. "sand",
+		mc .. "sandstone",
+		mc .. "bedrock",
+		mc .. "granite",
+		mc .. "diorite",
+		mc .. "andesite",
+		mc .. "cobbled_deepslate",
+		mc .. "deepslate",
+		mc .. "mossy_cobblestone",
+		mc .. "tuff",
+		iw .. "mossy_stone",
+		iw .. "ash",
+		iw .. "ash_block",
+		iw .. "silt",
+		"create:scoria",
+		"asbestos:asbestos_fibers"
+	}
+
 function isInventoryFull()
 	for i=1, 16 do
 		if turtle.getItemCount(i) == 0 then
@@ -81,33 +108,6 @@ function getItemCount(name)
 	end
 	return count
 end
-
-function dropThrash()
-	-- turtle editor-friendly item lines
-	local mc = "minecraft:"
-	local iw = "immersive_weathering:"
-	local thrash = {
-		mc .. "stone",
-		mc .. "cobblestone",
-		mc .. "dirt",
-		mc .. "gravel",
-		mc .. "sand",
-		mc .. "sandstone",
-		mc .. "bedrock",
-		mc .. "granite",
-		mc .. "diorite",
-		mc .. "andesite",
-		mc .. "cobbled_deepslate",
-		mc .. "deepslate",
-		mc .. "mossy_cobblestone",
-		mc .. "tuff",
-		iw .. "mossy_stone",
-		iw .. "ash",
-		iw .. "ash_block",
-		iw .. "silt",
-		"create:scoria",
-		"asbestos:asbestos_fibers"
-	}
 
 	for i=1, 16 do
 	
