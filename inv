@@ -1,5 +1,5 @@
 function dropThrash()
-	-- add/remove items to drop
+	-- CC editor-friendly item lines
 	local mc = "minecraft:"
 	local iw = "immersive_weathering:"
 	local thrash = {
@@ -24,6 +24,19 @@ function dropThrash()
 		"create:scoria",
 		"asbestos:asbestos_fibers"
 	}
+
+	for i=1, 16 do
+		details = turtle.getItemDetail(i)
+		if details then
+			for j=1, #thrash do
+				if details.name == thrash[j] then
+					turtle.select(i)
+					turtle.drop()
+				end
+			end
+		end
+	end
+end
 
 function isInventoryFull()
 	for i=1, 16 do
@@ -107,20 +120,4 @@ function getItemCount(name)
 		end
 	end
 	return count
-end
-
-	for i=1, 16 do
-	
-		details = turtle.getItemDetail(i)
-		
-		if details then
-		
-			for j=1, #thrash do
-				if details.name == thrash[j] then
-					turtle.select(i)
-					turtle.drop()
-				end
-			end
-		end
-	end
 end
